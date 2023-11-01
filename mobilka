@@ -1,0 +1,28 @@
+setContent {
+            Column(modifier = Modifier.verticalScroll(rememberScrollState())) {
+                List(dis = "fsfsf", img = R.drawable. img_1)
+                List(dis = "fsfsf", img = R.drawable.img_2)
+                List(dis = "fsfsf", img = R.drawable.img_1)
+            }
+        }
+    }
+}
+
+@Composable
+private fun List(dis: String, img: Int){
+    Card(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(10.dp)
+    ){
+        Column {
+            Image(
+                painter = painterResource(id = img),
+                contentDescription = "",
+                modifier = Modifier.fillMaxWidth(),
+                contentScale = ContentScale.FillBounds
+
+            )
+            Text(text = dis, modifier = Modifier.padding(15.dp), fontSize = 20.sp)
+        }
+    }
